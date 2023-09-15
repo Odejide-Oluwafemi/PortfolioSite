@@ -1,0 +1,388 @@
+*
+{
+    font-family: 'Poppins', sans-serif;
+    transition: .5s ease-out;
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+}
+
+nav
+{
+    display: flex;
+    padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 1px 5px rgb(155, 155, 155);
+}
+
+nav .logo:hover
+{
+    transition: .3s ease-out;
+    font-size: 31px;
+}
+
+nav > a > span
+{
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(83, 1, 150);
+}
+
+li
+{
+    display: inline-block;
+    margin-right: 15px;
+    list-style-type: none;
+}
+
+nav ul li a:hover[class = "navlinks"]
+{
+    color: #2b35bc;
+}
+
+a
+{
+    color: black;
+    font-weight: 400;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav ul li a[class ~= "active"]
+{
+    color: #0a1172;
+    font-weight: 700;
+    border-bottom: 2px solid #0a1172;
+}
+
+.home
+{
+    height: min-content;
+    box-sizing: border-box;
+    padding: 80px 100px;
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.home .graphics
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 80px;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.home .graphics .circle
+{
+    position: relative;
+    border-radius: 50%;
+}
+
+.home .graphics .c1
+{
+    top: 100px;
+    left: 20px;
+    width: 38px;
+    height: 38px;
+    background-color: #2b35bc54;
+    animation: anim1 3s ease-in-out 0s infinite alternate;
+}
+
+.home .graphics .c2
+{
+    top: 130px;
+    left: 20px;
+    width: 38px;
+    height: 38px;
+    background-color: #2b35bc54;
+    animation: anim1 3s ease-in-out .75s infinite alternate;
+}
+
+.home .graphics .c3
+{
+    top: 160px;
+    left: 20px;
+    width: 38px;
+    height: 38px;
+    background-color: #2b35bc54;
+    animation: anim1 3s ease-in-out 1.5s infinite alternate;
+}
+
+.home .graphics .square
+{
+    position: relative;
+    border-radius: 5%;
+}
+
+.home .graphics .s1
+{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(95, 158, 160, 0.291);
+    top: initial;
+    left: 700px;
+    animation: anim2 5s ease-in-out 0s infinite forwards;
+}
+
+.home .graphics .s2
+{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(95, 158, 160, 0.291);
+    top: 100px;
+    left: 790px;
+    animation: anim2 5s ease-in-out 1s infinite forwards;
+}
+
+.home .graphics .s3
+{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(95, 158, 160, 0.291);
+    top: 190px;
+    left: 700px;
+    animation: anim2 5s ease-in-out 2s infinite forwards;
+}
+
+.home .graphics .diamond
+{
+    position: relative;
+    border-radius: 8%;
+    transform: rotate(45deg);
+    opacity: .6;
+}
+
+.home .graphics .d1
+{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    top: 250px;
+    animation: anim3 10s linear 0s infinite forwards;
+}
+
+.home .graphics .d2
+{
+    width: 175px;
+    height: 175px;
+    background-color: aquamarine;
+    top: -400px;
+    left: 1260px;
+    animation: anim3 10s linear .5s infinite forwards;
+}
+
+.home .graphics .d3
+{
+    width: 225px;
+    height: 225px;
+    background-color: aquamarine;
+    top: -200px;
+    left: 1000px;
+    animation: anim3 10s linear 1s infinite forwards;
+}
+
+@keyframes anim1 {
+    from
+    {
+        translate: initial;
+    }
+
+    to
+    {
+        translate: 50px 0px;
+    }
+}
+
+@keyframes anim2 {
+    0%
+    {
+        translate: initial;
+    }
+
+    25%
+    {
+        translate: 50px -50px;
+    }
+
+    50%
+    {
+        translate: -50px -50px;
+    }
+
+    75%
+    {
+        translate: -50px 50px;
+    }
+
+    100%
+    {
+        translate: initial;
+    }
+}
+
+@keyframes anim3
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.home .left-section
+{
+    width: 650px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: 3px dotted #0a11727b;
+}
+
+.home .left-section *
+{
+    margin-bottom: 10px;
+}
+
+.left-section h1
+{
+    font-family: cursive;
+    width: 520px;
+}
+
+.left-section h1 span.greeting
+{
+    color: #0a1172;
+}
+
+.left-section h1 span.name
+{
+    color: #fc0303;
+    font-family: 'Times New Roman';
+    font-size: 48px;
+}
+
+.left-section h1 span.career
+{
+    color: #0a1172;
+    font-family: 'Times New Roman';
+    font-size: 32px;
+}
+
+.left-section p .description
+{
+    width: 60px;
+    letter-spacing: 1.2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-section p span.core-feature
+{
+    color: #fc0303;
+    font-style: oblique;
+    font-weight: bolder;
+}
+
+.left-section .cta
+{
+    margin-top: 40px;
+    display: flex;
+    height: fit-content;
+}
+
+.left-section .cta button
+{
+    min-width: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #0a1172;
+    font-size: 16px;
+    margin-right: 30px;
+    box-shadow: 0px 5px 0 0 #0a1172;
+}
+
+.left-section .cta button#contact:hover
+{
+    background-color: #0a1172;
+    color: white;
+}
+
+.left-section .cta button:hover
+{
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.4s ease-in-out;
+}
+
+.left-section button#hire
+{
+    color: white;
+    background-color: #0a1172;
+}
+
+.left-section .cta button#hire:hover
+{
+    background-color: white;
+    color: #0a1172;
+}
+
+.left-section .social-icons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3px 5px;
+    width: max-content;
+}
+
+.left-section .social-icons a
+{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    background-color: #0a1172;
+    color: white;
+    object-fit: cover;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-right: 12px;
+    text-align: center;
+    align-items: center;
+}
+
+.left-section .social-icons a:hover
+{
+    transition: 0.3s ease-out;
+    font-size: 33px;
+    translate: 0 -6px;
+}
+
+.home .right-section
+{
+    margin-right: 50px;
+}
+
+.right-section #profile
+{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0a1172;
+    outline: 4px dotted #fc03032c;
+    outline-offset: 18px;
+}
